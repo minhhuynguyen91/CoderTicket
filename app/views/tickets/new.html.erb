@@ -32,7 +32,8 @@
         <tr>
           <td> <%= type.name %> </td>
           <td> <%= number_to_currency(type.price, unit: 'VND ', precision: 0) %> </td>
-          <td> <%= select_tag('quantity', options_for_select(0..10)) %></td> 
+          <!--<td> <%# <%= select_tag('quantity', options_for_select(0..10)) %></td> -->
+          <td> <%= type.max_quantity %> </td>
         </tr>
         <% end %> 
       </table>
@@ -40,7 +41,7 @@
   </div>
   <div class="row">
     <div class="col-md-11 col-md-offset-1">  
-    <%= form_tag event_tickets_path, method: :post,class:"form-book-ticket" do %>
+    <%= form_tag event_tickets_path, method: :post, class:"form-book-ticket" do %>
         <%= text_field_tag :name, nil, placeholder: "Name", class: "form-control" %>
         </br>
         <%= text_field_tag :address, nil, placeholder: "Address", class: "form-control" %>

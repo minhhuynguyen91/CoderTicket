@@ -5,7 +5,7 @@ class CreateTickets < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :address
       t.string :phone
-      t.string :count
+      t.integer :count
 
       t.timestamps
     end

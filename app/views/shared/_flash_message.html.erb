@@ -1,0 +1,20 @@
+<div style="padding-top:80px;">
+  <% if flash[:error] %>
+    <div class="alert alert-danger"> 
+      <% if flash[:error].kind_of?(Array)  %>
+        <% flash[:error].each do |error_type| %>
+          <li>
+            <ul> <%= error_type %> </ul>
+          </li>
+        <% end %>
+      <% else %>
+        <%= flash[:error] %>
+      <% end %>
+    </div>
+    
+  <% elsif flash[:success] %>
+    <div class="alert alert-success"> 
+      <%= flash[:success] %>
+    </div>
+  <% end %>
+</div>
