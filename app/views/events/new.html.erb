@@ -21,6 +21,9 @@
         <%= e.fields_for :venue do |builder| %>
           <%= builder.label :Venue %> <br>
           <%= builder.text_field :name, class:'form-control' %> <br>
+
+          <%= builder.label :'Full Address' %>
+          <%= builder. text_field :'full_address', class:'form-control' %> <br>
         <% end %>
         
         <%= e.label :category_id %>
