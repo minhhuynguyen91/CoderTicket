@@ -1,9 +1,9 @@
 class Event < ActiveRecord::Base
   belongs_to :venue
   belongs_to :category
-  has_many :ticket_types
-  
   belongs_to :user
+  
+  has_many :ticket_types, dependent: :destroy
   
   validates_presence_of :extended_html_description, :venue, :category, :starts_at
   validates_uniqueness_of :name, uniqueness: {scope: [:venue, :starts_at]}
@@ -22,4 +22,8 @@ class Event < ActiveRecord::Base
     where("starts_at > ?",Time.now)
   end
 
+  def check_publish?
+    self.ticket_types.length > 0
+  end
+  
 end

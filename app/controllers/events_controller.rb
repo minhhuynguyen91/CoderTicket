@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   
   def index
     if params[:search].nil? || params[:search].blank?
-      @events = Event.all
+      @events = Event.upcoming
     else
       @events = Event.search(params[:search])
     end
@@ -37,7 +37,7 @@ class EventsController < ApplicationController
       @event.publish_event
       redirect_to root_path
     else
-      flash[:danger]= "Need at least one ticket type to publish event"
+      flash[:error]= "Need at least one ticket type to publish event"
       redirect_to mines_events_path
     end
   end
@@ -45,8 +45,6 @@ class EventsController < ApplicationController
   def event_list
     @events = current_user.events.where(publish:false)
   end
-
-
 
   private
     def event_params

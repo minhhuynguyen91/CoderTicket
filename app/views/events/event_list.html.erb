@@ -15,7 +15,7 @@
             <td><%= x.starts_at %></td>
             <td><%= link_to "Publish this event", publish_events_path(event_id:x.id),method: :post%></td>
             <td><%= link_to "Create Ticket Type",new_ticket_type_path(event_id:x.id)%></td>
-          </tr>q
+          </tr>
       <% end %>
   <% end %>
   </thead>
