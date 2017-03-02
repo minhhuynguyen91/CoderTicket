@@ -1,0 +1,22 @@
+<table class="table" style="margin-top: 23px">
+  <thead class="thead-inverse">
+  <tr>
+    <th>#</th>
+    <th>Event Name</th>
+    <th>End at</th>
+    <th>Publish</th>
+    <th>Ticket</th>
+  </tr>
+  <% if @events %>
+      <% @events.each_with_index do |x, i| %>
+          <tr>
+            <td><%= i %></td>
+            <td><%= x.name %></td>
+            <td><%= x.starts_at %></td>
+            <td><%= link_to "Publish this event", publish_events_path(event_id:x.id),method: :post%></td>
+            <td><%= link_to "Create Ticket Type",new_ticket_type_path(event_id:x.id)%></td>
+          </tr>q
+      <% end %>
+  <% end %>
+  </thead>
+</table>
