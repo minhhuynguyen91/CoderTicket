@@ -43,7 +43,8 @@ class EventsController < ApplicationController
   end
 
   def event_list
-    @events = current_user.events.where(publish:false)
+    #@events = current_user.events.where(publish:false)
+    @events = current_user.events.order(:publish)
   end
 
   private

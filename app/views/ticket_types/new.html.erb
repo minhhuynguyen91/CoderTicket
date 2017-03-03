@@ -1,0 +1,17 @@
+<div class="container">
+<%= form_for @ticket_type, html:{class:"form-signin"} do |f| %>
+    <h2 class="form-signin-heading">Create Ticket</h2>
+   <%=f.hidden_field :event_id %>
+
+    <%= f.label :name,nil, class:"sr-only" %>
+    <%= f.text_field :name, class: "form-control", placeholder: "Ticket name" %>
+    </br>
+    <%= f.label :max_quantity ,nil, class:"sr-only" %>
+    <%= f.number_field :max_quantity, class: "form-control", placeholder: "Quantity" %>
+    </br>
+    <%= f.label :price,nil, class:"sr-only"  %>
+    <%= f.number_field :price, class: "form-control", placeholder: "Price" %>
+    </br>
+    <%= f.submit "Create" ,class:"btn btn-lg btn-primary btn-block"%>
+<% end %>
+</div>

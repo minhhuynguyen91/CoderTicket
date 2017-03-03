@@ -13,8 +13,12 @@
             <td><%= i %></td>
             <td><%= x.name %></td>
             <td><%= x.starts_at %></td>
+            <% unless x.publish? %>
             <td><%= link_to "Publish this event", publish_events_path(event_id:x.id),method: :post%></td>
-            <td><%= link_to "Create Ticket Type",new_ticket_type_path(event_id:x.id)%></td>
+            <% else %>
+            <td> <strong> PUBLISHED </strong> </td>
+            <% end %>
+            <td><%= link_to "Create Ticket Type", new_ticket_type_path(event_id:x.id)%></td>
           </tr>
       <% end %>
   <% end %>

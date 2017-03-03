@@ -19,11 +19,15 @@ class Event < ActiveRecord::Base
   end
 
   def self.upcoming
-    where("starts_at > ?",Time.now)
+    where("starts_at > ? and publish=true", Time.now)
   end
 
   def check_publish?
     self.ticket_types.length > 0
   end
-  
+
+  def publish_event
+    self.publish=true
+    save
+  end  
 end
