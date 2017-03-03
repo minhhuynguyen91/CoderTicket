@@ -20,10 +20,17 @@
           <div class="clearfix"></div>
         <% end %>
         <%= link_to 'BOOK NOW', new_event_ticket_path(@event), class: 'btn btn-lg btn-block btn-danger'%>
-
       </div>
     </div>
     <div class="col-md-9 event-content">
+      <div class="container"> 
+        <h2> Related Events </h2>
+        <ul>
+          <% @related_events.each do |related_event| %>
+            <li> <%= link_to related_event.name, event_path(related_event.id) %> </li>
+          <% end %>
+        </ul>
+      </div>
       <div class="hero-img hidden-sm-down" style="background-image: url(<%= @event.hero_image_url %>); background-size: cover;"> </div>
       <div class="container">
         <h3> <%= @event.name %> </h3>

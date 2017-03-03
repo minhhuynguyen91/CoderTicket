@@ -12,15 +12,18 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @related_events = Event.check_related_event(params[:id])
   end
 
   def new
     @categories = Category.all
+    @regions = Region.all
     @event = Event.new
     @event.build_venue
   end
 
   def create
+    @regions = Region.all
     @categories = Category.all
     @event = current_user.events.build(event_params)
     if @event.save
@@ -35,6 +38,7 @@ class EventsController < ApplicationController
   def edit
     @event = Event.find(params[:id])
     @categories = Category.all
+    @regions = Region.all
   end
 
   def update

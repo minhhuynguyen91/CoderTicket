@@ -23,9 +23,12 @@
           <%= builder.text_field :name, class:'form-control' %> <br>
 
           <%= builder.label :'Full Address' %>
-          <%= builder. text_field :'full_address', class:'form-control' %> <br>
+          <%= builder.text_field :'full_address', class:'form-control' %> <br>
+
+          <%= builder.label :'Region' %>
+          <%= builder.select(:region_id, options_from_collection_for_select(regions,"id","name"), {}, {class: 'form-control'}) %> <br>          
         <% end %>
-        
+
         <%= e.label :category_id %>
         <%= e.select(:category_id,options_from_collection_for_select(categories,"id","name"),{},{class:"form-control"}) %>
         <div class="text-xs-center" style="padding-top:30px">

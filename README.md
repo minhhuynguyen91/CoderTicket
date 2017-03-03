@@ -61,7 +61,7 @@ The person with best test coverage will win a small present from the instructor 
 * [x] Users cannot buy tickets to events that occur in the past.
 * [x] Users can log in with Facebook.
 * [ ] Users receive an email when they have purchased a ticket.
-* [ ] Users can see "related events" when browsing an event. Related events should belong to the same category and be in the same region.
+* [x] Users can see "related events" when browsing an event. Related events should belong to the same category and be in the same region.
 * [ ] User A can allow User B to edit User A's event. In other words, an event owner can assign other people to be "event admins".
 * [ ] Ticket types have an optional "minimum" purchase quantity. ([Example Screenshot](http://i.imgur.com/DOYtAR0.png))
 * [ ] Events are automatically labeled as "Hot". "Hot" events should have a red border or some sort of visual flourish. The event title should also be prefixed with "**HOT:**".

@@ -29,5 +29,18 @@ class Event < ActiveRecord::Base
   def publish_event
     self.publish=true
     save
-  end  
+  end
+
+  def self.check_related_event(event_id)
+    @event = Event.find_by_id(event_id)
+    related_events = []
+    Event.where(:category_id => @event.category_id).each do |event|
+      if event.venue.region_id == @event.venue.region_id \
+      and event.id != @event.id
+        related_events << event
+      end
+    end
+    return related_events
+  end
+
 end
