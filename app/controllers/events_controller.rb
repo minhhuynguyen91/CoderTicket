@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
-  before_action :require_login, :only => [:new, :create, :event_list]
+  before_action :require_login, :only => [:new, :create, :event_list, :edit]
+  before_action :check_user_permission, :only => [:edit, :update]
   
   def index
     if params[:search].nil? || params[:search].blank?
@@ -29,6 +30,26 @@ class EventsController < ApplicationController
       flash[:error] = @event.errors.full_messages
       render 'new'
     end
+  end
+
+  def edit
+    @event = Event.find(params[:id])
+    @categories = Category.all
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    @categories = Category.all
+    @event.attributes = event_params
+
+    if @event.save
+      flash[:success] = "Event is successfully updated"
+      redirect_to root_path
+    else
+      flash[:error] = @event.errors.full_messages
+      render 'new'
+    end
+
   end
 
   def publish

@@ -14,7 +14,10 @@
       <% if current_user %>
         <li class="nav-item">
           <%= link_to 'Log Out', session_path(current_user), :method => :delete, class: 'nav-link' %>
-        </li>  
+        </li>
+        <li class="nav-item">
+          <%= link_to current_user.email, '#', :method => :delete, class: 'nav-link' %>
+        </li>
       <% else %>
         <li class="nav-item">
           <%= link_to 'Log In', new_session_path, class: 'nav-link' %>

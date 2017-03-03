@@ -6,6 +6,11 @@
         <h4 class="card-title"><%= event.name %></h4>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
         </p>
+        <% if current_user %>
+          <% if check_user_permission(event.id) %>
+            <%= link_to 'Edit', edit_event_path(event.id), class: 'btn btn-warning' %>
+          <% end %>
+        <% end %>
       </div>
     </div>
   <% end %>
