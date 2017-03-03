@@ -1,5 +1,30 @@
 require 'rails_helper'
 
 RSpec.describe Ticket, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '.not_more_than_quantity' do
+    it 'return false when ticket number exceed the max_quantity' do
+      ticket_type = TicketType.new(:max_quantity => 10)
+      ticket_type.save(:validates => false)
+
+      ticket = Ticket.new(:ticket_type_id => ticket_type.id, :count => 11)
+      
+      expect(ticket.valid?).to eq(false)
+    end
+    it 'return true when ticket number is less than the max_quantity' do
+      ticket_type = TicketType.new(:max_quantity => 10)
+      ticket_type.save(:validates => false)
+      
+      ticket = Ticket.new(:ticket_type_id => ticket_type.id, :count => 8)
+      expect(ticket.valid?).to eq(true)
+    end
+
+    it "update the ticket_type max_quantity after successfully booking ticket" do
+      ticket_type = TicketType.new(:max_quantity => 10)
+      ticket_type.save(:validates => false)
+      
+      ticket = Ticket.create!(:ticket_type_id => ticket_type.id, :count => 8)
+      
+      expect(ticket_type.max_quantity).to eq(2)
+    end
+  end
 end

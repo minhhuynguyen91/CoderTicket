@@ -6,19 +6,19 @@ class TicketsController < ApplicationController
   end
 
   def create
+    @event = Event.find(params[:event_id])
+    @ticket_types = @event.ticket_types
     @ticket = Ticket.new(ticket_params)
     if @ticket.save
-      flash[:success] = "Sussessul register ticket"
+      flash[:success] = "Successfully register ticket"
       redirect_to root_path
     else
       flash.now[:error] = @ticket.errors.full_messages
-      @event = Event.find(params[:event_id])
-      @ticket_types = @event.ticket_types
       render 'new'
     end
   end
   private
     def ticket_params
-      params.permit(:name,:address,:phone, :count,:ticket_type_id)
+      params.require(:ticket).permit(:name,:address,:phone, :count, :ticket_type_id)
     end
 end

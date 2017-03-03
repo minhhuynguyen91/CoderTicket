@@ -3,9 +3,9 @@
     <div class="alert alert-danger"> 
       <% if flash[:error].kind_of?(Array)  %>
         <% flash[:error].each do |error_type| %>
-          <li>
-            <ul> <%= error_type %> </ul>
-          </li>
+          <ul>
+            <li> <%= error_type %> </li>
+          </ul>
         <% end %>
       <% else %>
         <%= flash[:error] %>
