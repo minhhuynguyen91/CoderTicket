@@ -27,7 +27,7 @@ class EventsController < ApplicationController
       flash[:success] = "Your event is created"
       redirect_to root_path
     else
-      flash.now[:error] = @event.errors.full_messages
+      flash[:error] = @event.errors.full_messages
       render 'new'
     end
   end
@@ -46,7 +46,7 @@ class EventsController < ApplicationController
       flash[:success] = "Event is successfully updated"
       redirect_to root_path
     else
-      flash.now[:error] = @event.errors.full_messages
+      flash[:error] = @event.errors.full_messages
       render 'new'
     end
 
@@ -58,7 +58,7 @@ class EventsController < ApplicationController
       @event.publish_event
       redirect_to root_path
     else
-      flash.now[:error]= "Need at least one ticket type to publish event"
+      flash[:error]= "Need at least one ticket type to publish event"
       redirect_to mines_events_path
     end
   end

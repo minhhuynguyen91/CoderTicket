@@ -58,3 +58,6 @@ group :development do
   
   gem 'guard-rspec', require: false
 end
+
+gem 'omniauth'
+gem 'omniauth-facebook', '~> 3.0.0'

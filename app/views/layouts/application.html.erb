@@ -13,14 +13,14 @@
     <ul class="nav navbar-nav">
       <% if current_user %>
         <li class="nav-item">
-          <%= link_to 'Log Out', session_path(current_user), :method => :delete, class: 'nav-link' %>
+          <%= link_to 'Log Out', signout_path, :method => :delete, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <%= link_to current_user.email, '#', :method => :delete, class: 'nav-link' %>
+          <%= link_to current_user.email, '#', class: 'nav-link' %>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to 'Log In', new_session_path, class: 'nav-link' %>
+          <%= link_to 'Log In', signin_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
           <%= link_to 'Sign Up', new_user_path, class: 'nav-link' %>
@@ -33,6 +33,10 @@
         </li>
         <li class="nav-item" style="float: right">
           <%= link_to 'My Event', mines_events_path, class: 'nav-link' %>
+        </li>
+      <% else %>
+        <li class="nav-item" style="float: right">
+          <%= link_to "Sign in with facebook", "/auth/facebook", class: 'nav-link' %>
         </li>
       <% end %>
     </ul>

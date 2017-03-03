@@ -2,7 +2,14 @@ Rails.application.routes.draw do
 
   root 'events#index'
   resources :users, :only => [:new, :create]
-  resources :sessions, :only => [:new, :create, :destroy]
+  
+  get  'signin' => 'sessions#new'
+  post 'signin' => 'sessions#create'
+  get 'auth/:provider/callback' => 'sessions#callback'
+  
+  delete 'signout' => 'sessions#destroy'
+
+
   resources :ticket_types, only: [:new, :create]
   
   resources :events do

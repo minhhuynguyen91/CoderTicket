@@ -58,8 +58,8 @@ The person with best test coverage will win a small present from the instructor 
 
 ### Optional Stories
 
-* [ ] Users cannot buy tickets to events that occur in the past.
-* [ ] Users can log in with Facebook.
+* [x] Users cannot buy tickets to events that occur in the past.
+* [x] Users can log in with Facebook.
 * [ ] Users receive an email when they have purchased a ticket.
 * [ ] Users can see "related events" when browsing an event. Related events should belong to the same category and be in the same region.
 * [ ] User A can allow User B to edit User A's event. In other words, an event owner can assign other people to be "event admins".

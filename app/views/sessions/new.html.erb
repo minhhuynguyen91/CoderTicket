@@ -1,5 +1,5 @@
 <div class="container">
-<%= form_tag sessions_path, method: :POST, class: "form-signin" do %>
+<%= form_tag signin_path, :method => :post , class: "form-signin" do %>
     <h2 class="form-signin-heading">Sign in</h2>
     <%= label_tag :email, nil, class: "sr-only" %>
     <%= text_field_tag(:email, nil, class: "form-control", placeholder: "Email address") %>
