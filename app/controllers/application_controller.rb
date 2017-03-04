@@ -22,9 +22,12 @@ class ApplicationController < ActionController::Base
 
   def check_user_permission
     @event = Event.find_by_id(params[:id])
-    unless current_user.id == @event.user_id
-      flash[:error] = "You don't have permissions to conduct this action"
-      redirect_to root_path
+    @owners = @event.ownerships.collect {|o| o.owner_id}
+    unless current_user.id == @event.user_id 
+      unless @owners.include?(current_user.id)
+        flash[:error] = "You don't have permissions to conduct this action"
+        redirect_to root_path
+      end
     end
   end
   

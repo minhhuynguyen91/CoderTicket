@@ -1,3 +1,6 @@
+
+<%= link_to 'Add Owner', '#modal-window', class:'btn btn-primary', 'data-toggle' => 'modal' %>
+
 <table class="table" style="margin-top: 23px">
   <thead class="thead-inverse">
   <tr>
@@ -24,3 +27,17 @@
   <% end %>
   </thead>
 </table>
+
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+           <h3 id="myModalLabel">Add Owner </h3>
+         </div>
+         <div class="modal-body">
+            <%= render partial: 'ownerships/form', locals: {events: @events, users: @users} %>
+         </div>
+      </div>
+    </div>
+</div>
+

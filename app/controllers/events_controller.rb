@@ -70,6 +70,7 @@ class EventsController < ApplicationController
   def event_list
     #@events = current_user.events.where(publish:false)
     @events = current_user.events.order(:publish)
+    @users = User.where.not(:id => current_user.id)
   end
 
   private

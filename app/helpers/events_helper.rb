@@ -5,7 +5,8 @@ module EventsHelper
 
   def check_user_permission(event_id)
     @event = Event.find_by_id(event_id)
-    current_user.id == @event.user_id
+    @owners = @event.ownerships.collect {|o| o.owner_id}
+    current_user.id == @event.user_id || @owners.include?(current_user.id)
   end
 
 end

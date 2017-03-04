@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 
   resources :ticket_types, :only => [:new, :create]
   
-  #resources :tickets, :only => [:new, :create]
-
   resources :events do
     resources :tickets, :only => [:new, :create]
     collection do

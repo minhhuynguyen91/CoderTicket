@@ -5,6 +5,9 @@ class Event < ActiveRecord::Base
   
   has_many :ticket_types, dependent: :destroy
   
+  has_many :ownerships
+  has_many :owners, :through => :ownerships
+
   validates_presence_of :extended_html_description, :venue, :category, :starts_at
   validates_uniqueness_of :name, uniqueness: {scope: [:venue, :starts_at]}
 

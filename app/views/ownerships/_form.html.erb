@@ -1,0 +1,8 @@
+<%= form_tag(add_owner_events_path, :method => :post) do %>
+  <%= select_tag(:owner_id, options_from_collection_for_select(users, "id", "email"), class: 'form-control') %>
+  <br>
+  <%= select_tag(:event_id, options_from_collection_for_select(events, "id", "name"), class: 'form-control') %>
+  <button type='submit', class='btn btn-outline-success my-2 my-sm-0'> Add owner </button>
+  <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+<% end %>
+
