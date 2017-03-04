@@ -41,7 +41,7 @@
   </div>
   <div class="row">
     <div class="col-md-11 col-md-offset-1">  
-    <%= form_for [@event, @ticket], url: {action: "create"} do |f| %>
+    <%= form_for [@event, @ticket], url: event_tickets_path, method: 'post', remote: false do |f| %>
         <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
         </br>
         <%= f.text_field :address, placeholder: "Address", class: "form-control" %>
@@ -52,11 +52,10 @@
         </br>
         <%= f.select(:ticket_type_id, options_from_collection_for_select(@ticket_types, "id", "name"), {}, {:class => 'form-control'} ) %>
         </br>
-      </div>
-        <div class="col-md-2 col-md-offset-5">
+        <div class="col-md-2"> 
           <%= f.submit "Buy", class: "btn btn-success btn-lg btn-block" %>
         </div>
     <% end %>
-  <div>
+    </div>
 </div>  
 
