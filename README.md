@@ -81,7 +81,7 @@ There are some limitations about this app:
 
 1 - Does not have remove owner function due to bad designing concept
 
-2 - Remove owner function will be overlapped if user continue to change 
+2 - Add owner function will be overlapped if user continue to change 
 owner for the same event.
 
 3 - Bad in design
