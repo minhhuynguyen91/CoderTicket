@@ -5,8 +5,17 @@
   </head>
   <body>
     <h1>Hi <%= @ticket.name %></h1>
-    <p>
-      Sample mail sent using smtp.
-    </p>
+    <br>
+    <p> I would like to confirm that you've booked the ticket for <%= @event.name %> </p>
+    <p> Please kindly check these info below </p>
+    <br>
+      <ul>
+        <li> Ticket type: <%= @ticket_types.name %> </li>
+        <li> Price: <%= @ticket_types.price%> VND </li>
+        <li> Quantity: <%= @ticket.count %> </li>
+        <li> Email: <%= @ticket.email %> </li>
+        <li> Phone: <%= @ticket.phone %> </li>
+        <li> Address: <%= @ticket.address %> </li>
+      </ul>
   </body>
 </html>
