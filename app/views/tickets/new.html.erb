@@ -40,9 +40,11 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-11 col-md-offset-1">  
+    <div class="col-md-11 col-md-offset-1">
     <%= form_for [@event, @ticket], url: event_tickets_path, method: 'post', remote: false do |f| %>
       <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+      </br>
+      <%= f.text_field :email, placeholder: "Name", class: "form-control" %>
       </br>
       <%= f.text_field :address, placeholder: "Address", class: "form-control" %>
       </br>

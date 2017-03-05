@@ -10,6 +10,7 @@ class TicketsController < ApplicationController
     @ticket_types = @event.ticket_types
     @ticket = Ticket.new(ticket_params)
     if @ticket.save
+      TicketMailer.ticket_email(@event, @ticket_types, @ticket)
       flash[:success] = "Successfully register ticket"
       redirect_to root_path
     else
@@ -19,6 +20,6 @@ class TicketsController < ApplicationController
   end
   private
     def ticket_params
-      params.require(:ticket).permit(:name,:address,:phone, :count, :ticket_type_id)
+      params.require(:ticket).permit(:name, :email, :address,:phone, :count, :ticket_type_id)
     end
 end
