@@ -4,7 +4,7 @@
 
 - Submitted by: **Nguyen Huy Minh**
 - Time spent: **18** hours
-- URL: **Insert your Heroku URL here**
+- URL: **https://limitless-dusk-47889.herokuapp.com**
 - SimpleCov Test Coverage: [coverage/index.html](coverage/index.html)
 
 ## User Stories
@@ -67,9 +67,24 @@ The person with best test coverage will win a small present from the instructor 
 * [ ] Events are automatically labeled as "Hot". "Hot" events should have a red border or some sort of visual flourish. The event title should also be prefixed with "**HOT:**".
 * [ ] Instead of showing all of the events on the main page, an "admin" user can dictate the events that show up on the main page.
 
+## Video Walkthrough 
+
+Here's a walkthrough of implemented user stories:
+
+![Video Walkthrough](https://github.com/minhhuynguyen91/CoderTicket/blob/master/demo.gif)
+
+GIF created with [Byzanz](https://linux.die.net/man/1/byzanz-record).
+
 ## Notes
 
-Describe any challenges encountered while building the app.
+There are some limitations about this app:
+
+1 - Does not have remove owner function due to bad designing concept
+
+2 - Remove owner function will be overlapped if user continue to change 
+owner for the same event.
+
+3 - Bad in design
 
 ## License
 
