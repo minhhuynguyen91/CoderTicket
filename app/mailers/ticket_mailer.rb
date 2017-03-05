@@ -3,8 +3,8 @@ class TicketMailer < ApplicationMailer
 
   def ticket_email(event, ticket_types, ticket)
     @event = event
-    @ticket_types = ticket_types
     @ticket = ticket
+    @ticket_types = TicketType.find_by_id(@ticket.ticket_type_id)
 
     subject_email = "Your ticket #{@ticket_types.name} for event #{@event.name} is booked" 
 
