@@ -44,7 +44,7 @@
     <%= form_for [@event, @ticket], url: event_tickets_path, method: 'post', remote: false do |f| %>
       <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
       </br>
-      <%= f.text_field :email, placeholder: "Name", class: "form-control" %>
+      <%= f.text_field :email, placeholder: "Email", class: "form-control" %>
       </br>
       <%= f.text_field :address, placeholder: "Address", class: "form-control" %>
       </br>
