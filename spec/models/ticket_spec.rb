@@ -27,4 +27,16 @@ RSpec.describe Ticket, type: :model do
       expect(ticket_type.max_quantity).to eq(2)
     end
   end
+  describe '.not_from_the_past' do
+    it "return validation false if the ticket is created for event from the past" do
+      event = Event.new(:starts_at => 1.day.ago)
+      event.save(:validate => false)
+
+      ticket_types = event.ticket_types.build
+      ticket_types.save(:validates => false)
+      
+      ticket = ticket_types.tickets.new
+      expect(ticket.valid?).to eq(false)
+    end
+  end
 end

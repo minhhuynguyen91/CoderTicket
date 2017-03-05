@@ -1,14 +1,45 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/ubuntu/workspace/spec/controllers/tickets_controller_spec.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/spec/views/events/index.htm.erb_spec.rb": [
         1,
         null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        7,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        7,
+        null,
+        1,
         1,
         null,
         null
       ],
-      "/home/ubuntu/workspace/spec/rails_helper.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -31,7 +62,7 @@
         null,
         null,
         null,
-        null,
+        3,
         null,
         null,
         null,
@@ -67,14 +98,14 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/config/environment.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/ubuntu/workspace/config/application.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/application.rb": [
         1,
         null,
         1,
@@ -102,7 +133,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/config/boot.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/boot.rb": [
         1,
         null,
         1,
@@ -118,7 +149,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/config/environments/test.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/environments/test.rb": [
         1,
         null,
         null,
@@ -162,7 +193,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/config/initializers/assets.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -175,7 +206,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/config/initializers/backtrace_silencers.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -184,18 +215,18 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/config/initializers/cookies_serializer.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/home/ubuntu/workspace/config/initializers/filter_parameter_logging.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/home/ubuntu/workspace/config/initializers/inflections.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -213,18 +244,25 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/config/initializers/mime_types.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/home/ubuntu/workspace/config/initializers/session_store.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/initializers/omniauth.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/home/ubuntu/workspace/config/initializers/simple_form.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/initializers/simple_form.rb": [
         null,
         1,
         null,
@@ -391,7 +429,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/config/initializers/simple_form_bootstrap.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/initializers/simple_form_bootstrap.rb": [
         null,
         1,
         1,
@@ -542,7 +580,7 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/config/initializers/wrap_parameters.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -558,8 +596,25 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/config/routes.rb": [
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/spec/factories/users.rb": [
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/config/routes.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
         null,
         1,
         1,
@@ -567,84 +622,100 @@
         1,
         null,
         1,
+        null,
+        1,
+        1,
         1,
         1,
         1,
         null,
         1,
+        1,
+        null,
         null,
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/app/helpers/events_helper.rb": [
-        1,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/app/helpers/sessions_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/app/helpers/ticket_types_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/app/helpers/tickets_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/app/helpers/users_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/app/controllers/tickets_controller.rb": [
-        1,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/app/helpers/application_helper.rb": [
         1,
         1,
         0,
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/app/helpers/events_helper.rb": [
         1,
         1,
+        2,
         null,
         null,
         1,
+        4,
+        4,
+        4,
+        null,
+        null,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/app/helpers/ownerships_helper.rb": [
+        1,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/app/helpers/ticket_types_helper.rb": [
+        1,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/app/helpers/tickets_helper.rb": [
+        1,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/spec/support/helpers/session_helpers.rb": [
+        1,
+        1,
+        1,
         0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/spec/support/factory_girl.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/app/models/event.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
         null,
         null,
         1,
@@ -653,22 +724,61 @@
         null,
         1,
         0,
-        0,
-        0,
         null,
+        null,
+        1,
+        0,
+        0,
         null,
         null,
         1,
         0,
         0,
         0,
+        null,
+        0,
         0,
         null,
         null,
+        0,
         null,
+        null,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/minhhuynguyen/Desktop/coderschool_workspace/assignment/CoderTicket/app/models/ownership.rb": [
+        1,
+        1,
+        1,
         null
       ]
     },
-    "timestamp": 1488538902
+    "timestamp": 1488694035
   }
 }
