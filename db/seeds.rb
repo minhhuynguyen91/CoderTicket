@@ -158,3 +158,17 @@ e = Event.create({
   DESC
 })  
 e.ticket_types << TicketType.create(name: 'General', price: 99000, max_quantity: 1000)
+
+# Create user
+
+User.create!(
+  :full_name => Faker::Name.name,
+  :email => 'a@example.com',
+  :password => 'asdf'
+)
+
+User.create!(
+  :full_name => Faker::Name.name,
+  :email => 'b@example.com',
+  :password => 'asdf'
+)
